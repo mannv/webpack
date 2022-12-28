@@ -1,12 +1,12 @@
-import _ from 'lodash';
+import _ from 'lodash'
 
-function component() {
-    const element = document.createElement('div');
+function component () {
+  const element = document.createElement('div')
 
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Import', 'lodash', '...'], ' ');
+  // Lodash, currently included via a script, is required for this line to work
+  element.innerHTML = _.join(['demo1_webpack', 'using html-webpack-plugin', '...'], ' ')
 
-    return element;
+  return element
 }
 
-document.body.appendChild(component());
+document.body.appendChild(component())
