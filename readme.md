@@ -22,3 +22,11 @@ output: {
     clean: true
 }
 ```
+
+## demo2/asset_management
+
+load css ảnh, fonts, ảnh
+
+```
+npm install --save-dev style-loader css-loader
+```

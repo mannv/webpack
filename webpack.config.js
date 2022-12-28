@@ -3,14 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
-  entry: {
-    app: './src/index.js',
-    home: './src/home.js'
-  },
+  entry: './src/index.js',
   output: {
-    filename: '[name].js',
-    // filename: '[name].[contenthash].js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
+    // assetModuleFilename: 'asset/[name]-[contenthash][ext]',
     clean: true
   },
   plugins: [
@@ -19,6 +16,22 @@ module.exports = {
       minify: false
     })
   ],
+  module: {
+    rules: [
+      {
+        test: /\.(sa|sc|c)ss$/i,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource'
+      }
+    ]
+  },
   optimization: {
     moduleIds: 'natural',
     runtimeChunk: 'single',

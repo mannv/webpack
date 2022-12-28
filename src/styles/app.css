@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Andika-Bold';
+    src: url('../fronts/Andika/Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Andika-Regular';
+    src: url('../fronts/Andika/Regular.ttf');
+}
+
+body {
+    background: greenyellow;
+}
+
+div {
+    font-family: 'Andika-Bold';
+    color: red;
+    font-size: 40px;
+}
