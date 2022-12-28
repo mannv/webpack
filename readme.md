@@ -30,3 +30,24 @@ load css ảnh, fonts, ảnh
 ```
 npm install --save-dev style-loader css-loader
 ```
+
+## demo2/development
+- debug
+- webserver
+  - mode watch
+    ```
+    "scripts": {
+      ...
+      "watch": "webpack --watch"
+    }
+      ```
+  - webpack-dev-server
+    ```
+    npm install --save-dev webpack-dev-server
+    ```
+    ```
+    "scripts": {
+      ...    
+      "start": "webpack serve --open"
+    }
+    ```

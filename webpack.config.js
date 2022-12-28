@@ -10,6 +10,7 @@ module.exports = {
     // assetModuleFilename: 'asset/[name]-[contenthash][ext]',
     clean: true
   },
+  devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Install html-webpack-plugin',
