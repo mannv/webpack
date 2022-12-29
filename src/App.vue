@@ -1,5 +1,14 @@
-<script setup>
+<script>
+import { defineComponent } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
+export default defineComponent({
+  components: {HelloWorld},
+  data() {
+    return {
+      languages: ['PHP', 'JS', '...']
+    }
+  }
+})
 </script>
 
 <template>
@@ -7,7 +16,7 @@ import HelloWorld from './components/HelloWorld.vue'
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="Hà Anh Mận" />
+      <HelloWorld msg="Hà Anh Mận" :languages="languages" />
     </div>
   </header>
 </template>
